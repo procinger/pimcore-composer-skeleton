@@ -1,0 +1,25 @@
+{
+    "name": "procinger/pimcore-composer-skeleton",
+    "description": "pimcore composer skeleton example",
+    "type": "project",
+    "require": {
+        "pimcore/pimcore": "^4.4"
+    },
+    "scripts": {
+      "post-create-project-cmd": [
+        "ln -sf vendor/pimcore/pimcore/pimcore/ pimcore",
+        "ln -sf vendor/pimcore/pimcore/.htaccess .htaccess",
+        "Pimcore\\Composer::postCreateProject"
+      ],
+      "post-install-cmd": [
+        "ln -sf vendor/pimcore/pimcore/pimcore/ pimcore",
+        "ln -sf vendor/pimcore/pimcore/.htaccess .htaccess",
+        "Pimcore\\Composer::postInstall"
+      ],
+      "post-update-cmd": [
+        "ln -sf vendor/pimcore/pimcore/pimcore/ pimcore",
+        "ln -sf vendor/pimcore/pimcore/.htaccess .htaccess",
+        "Pimcore\\Composer::postUpdate"
+      ]
+    }
+}
